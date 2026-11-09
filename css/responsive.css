@@ -511,3 +511,183 @@ img {
     gap: 8px !important;
   }
 }
+
+/* ---------- Mobile hero: Pencil structure, 345px (2026-11-09) ----------
+   Rahmat's pasted mobile hero frame, applied at phone widths.
+   Order inside Frame 19 becomes: Avatar, headline, description,
+   badges. Desktop and tablet layouts above are untouched.
+   Glyph sizes are the desktop art scaled by 33.171 / 87 = 0.3813,
+   matching the numbers in the pasted export exactly. */
+
+@media (max-width: 720px) {
+  .hero-section {
+    gap: 24px !important;
+  }
+
+  /* The 345px column, centered */
+  .hero-section > [data-pencil-name="Frame 19"] {
+    width: 100% !important;
+    max-width: 345px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-items: center !important;
+    gap: 24px !important;
+    overflow-x: visible;
+  }
+
+  /* 1. Avatar on top, full 186px, in flow instead of absolute */
+  .hero-section [data-pencil-name="Avatar"] {
+    order: 1;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    width: 186px !important;
+    height: 186px !important;
+    flex-shrink: 0;
+  }
+
+  .hero-section [data-pencil-name="Ellipse 138"] {
+    width: 186px !important;
+    height: 186px !important;
+  }
+
+  /* 2. Headline: three rows, line, word group, line */
+  .hero-section [data-pencil-name="Frame 18"] {
+    order: 2;
+    width: 100% !important;
+  }
+
+  .hero-section [data-pencil-name="Frame 16"],
+  .hero-section [data-pencil-name="Frame 15"],
+  .hero-section [data-pencil-name="Frame 17"] {
+    width: 100% !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .hero-section [data-pencil-name="Frame 18"] svg[data-pencil-name^="Line"] {
+    flex: 1 1 0 !important;
+    width: auto !important;
+    min-width: 0;
+    height: 1px !important;
+  }
+
+  .hero-section [data-pencil-name="Frame 1"],
+  .hero-section [data-pencil-name="Frame 2"],
+  .hero-section [data-pencil-name="Frame 3"] {
+    height: 40.033px !important;
+    gap: 2.288px !important;
+    flex-wrap: nowrap !important;
+    min-width: 0;
+  }
+
+  .hero-section [data-pencil-name="Frame 3"] {
+    width: fit-content !important;
+  }
+
+  .hero-section [data-pencil-name="Frame 18"] [style*="font-size: 82px"] {
+    font-size: 32px !important;
+    white-space: nowrap !important;
+  }
+
+  /* Glyph 1 (curious): orange rings, 27.01px in a 33.171px frame */
+  .hero-section
+    [data-pencil-name="Frame 1"]
+    > [data-pencil-name="Frame"] {
+    width: 33.171px !important;
+    height: 33.171px !important;
+    flex-shrink: 0;
+  }
+
+  .hero-section [data-pencil-name="Frame 1"] svg:nth-of-type(1) {
+    left: 5.829px !important;
+    top: 5.829px !important;
+    width: 27.01px !important;
+    height: 27.01px !important;
+  }
+
+  .hero-section [data-pencil-name="Frame 1"] svg:nth-of-type(2) {
+    left: 0.948px !important;
+    top: 0.948px !important;
+    width: 27.01px !important;
+    height: 27.01px !important;
+  }
+
+  /* Glyph 2 (explorer): pink starburst, 32.68px */
+  .hero-section
+    [data-pencil-name="Frame 2"]
+    > [data-pencil-name="Frame"] {
+    width: 33.171px !important;
+    height: 33.171px !important;
+    flex-shrink: 0;
+  }
+
+  .hero-section [data-pencil-name="Frame 2"] svg:nth-of-type(1) {
+    left: 0.23px !important;
+    top: 0.201px !important;
+    width: 32.68px !important;
+    height: 32.68px !important;
+  }
+
+  /* Glyph 3 (people-driven): Blue Rabbit in its 33.744px slot */
+  .hero-section [data-pencil-name="Frame 3"] > div:nth-child(2) {
+    width: 33.744px !important;
+    height: 33.744px !important;
+    flex-shrink: 0;
+  }
+
+  .hero-section [data-pencil-name="Blue Rabbit"] {
+    left: 33.744px !important;
+    top: 0.579px !important;
+    width: 33.171px !important;
+    height: 33.171px !important;
+  }
+
+  .hero-section [data-pencil-name="Blue Rabbit"] svg {
+    left: 0.894px !important;
+    top: 3.499px !important;
+    width: 31.5px !important;
+    height: 26.289px !important;
+  }
+
+  /* 3. Description: 24px, centered, wraps inside the column */
+  .hero-section
+    [data-pencil-name="I explore problems, uncover insights, and design with purpose."] {
+    order: 3;
+    width: 100% !important;
+    min-width: 0 !important;
+    font-size: 24px !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  /* 4. Badges: back in flow at their pasted size and offsets.
+     The pink pill keeps its -20.216px top, leaning into the
+     24px gap above the block, exactly as in the export. */
+  .hero-section [data-pencil-name="Frame 8865"] {
+    order: 4;
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 219.969px !important;
+    height: 65.956px !important;
+    flex-shrink: 0;
+  }
+
+  .hero-section
+    [data-pencil-name="Frame 8865"]
+    [style*="font-size: 16.161px"] {
+    font-size: 16.161px !important;
+  }
+
+  .hero-section [data-pencil-name="Frame 8865"] [style*="font-size: 12px"] {
+    font-size: 12px !important;
+  }
+
+  /* Buttons were not in the pasted frame: they stay, centered
+     under the badges instead of left-aligned */
+  .hero-section [data-pencil-name="Frame 25"] {
+    justify-content: center !important;
+  }
+}
