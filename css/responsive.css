@@ -376,3 +376,49 @@ img {
     flex-wrap: wrap !important;
   }
 }
+
+/* ---------- Project cards: inner content stacks in reading order ----------
+   Image, title, overview, objective, chips, View Details button.
+   Spacing only: no content or desktop layout changes. */
+
+@media (max-width: 900px) {
+  /* Breathing room between the stacked cards */
+  .project-stack > [data-pencil-name] {
+    margin-top: 28px !important;
+  }
+
+  /* Text column takes the full card width */
+  .project-stack [data-pencil-name="Frame 51"] {
+    width: 100% !important;
+  }
+
+  /* Wide decorative bar never overflows the card */
+  .project-stack [data-pencil-name="Rectangle 16"] {
+    max-width: 100% !important;
+  }
+
+  /* Overview above objective instead of side by side */
+  .project-stack [data-pencil-name="Frame 8827"] {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .project-stack [data-pencil-name="Frame 29"],
+  .project-stack [data-pencil-name="Frame 37"] {
+    width: 100% !important;
+  }
+
+  /* Chips wrap onto their own rows, button drops below them */
+  .project-stack [data-pencil-name="Frame 8826"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+
+  .project-stack
+    [data-pencil-name="Frame 8826"]
+    > [data-pencil-name="Frame 55"] {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+}
