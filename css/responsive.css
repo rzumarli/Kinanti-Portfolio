@@ -104,6 +104,49 @@ img {
     display: none !important;
   }
 
+  /* Experience cards: content uses the full card width instead of
+     the narrow fixed columns of the 447px desktop card */
+  [data-pencil-name="Frame 52"] .exp-card {
+    padding: 36px 32px !important;
+  }
+
+  .exp-card > [data-pencil-name="Frame 35"] > [data-pencil-name="Frame 34"] {
+    width: 100% !important;
+  }
+
+  .exp-card [data-pencil-name="Rectangle 16"] {
+    max-width: 100% !important;
+  }
+
+  .exp-card > div:last-of-type {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .exp-card [data-pencil-name="Frame 36"] {
+    position: static !important;
+    width: 100% !important;
+  }
+
+  /* Skills in two columns so the card width earns its keep */
+  .exp-card [data-pencil-name="Frame 50"] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px !important;
+    width: 100% !important;
+  }
+
+  /* Decorative flower anchors to the bottom-right corner
+     instead of floating at its desktop offset */
+  .exp-card > svg[data-pencil-name="Vector"] {
+    left: auto !important;
+    right: 20px !important;
+    top: auto !important;
+    bottom: 20px !important;
+    width: 170px !important;
+    height: auto !important;
+  }
+
   /* Social galleries: fewer columns */
   .asa-gallery {
     grid-template-columns: repeat(2, 1fr) !important;
