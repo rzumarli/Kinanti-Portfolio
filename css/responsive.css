@@ -1,0 +1,295 @@
+/* Kinanti Portfolio: responsive layer.
+   The desktop design (1512px Pencil canvas) is left untouched.
+   These rules only fluidize fixed pixel widths and restack
+   sections below the design width. Loaded after css/style.css. */
+
+/* ---------- Fluid canvas at any narrower viewport ---------- */
+
+html,
+body {
+  overflow-x: clip;
+}
+
+[data-pencil-name="Frame 9478"] {
+  width: 100% !important;
+  max-width: 1512px;
+}
+
+[data-pencil-name="Frame 9478"] > div {
+  padding-left: clamp(20px, 6.42vw, 97px) !important;
+  padding-right: clamp(20px, 6.42vw, 97px) !important;
+}
+
+/* Fixed top navigation follows the viewport, not the canvas */
+[data-pencil-name="Frame 12"] {
+  width: 100% !important;
+  padding-left: clamp(16px, 6.42vw, 97px) !important;
+  padding-right: clamp(16px, 6.42vw, 97px) !important;
+}
+
+[data-pencil-name="Frame 12"].is-stuck {
+  padding-left: clamp(16px, 6.42vw, 97px) !important;
+  padding-right: clamp(16px, 6.42vw, 97px) !important;
+}
+
+/* Fixed content widths become fluid */
+[style*="width: 1512px"] {
+  width: 100% !important;
+}
+
+[style*="width: 1318px"] {
+  width: 100% !important;
+}
+
+[style*="width: 1240px"] {
+  width: 100% !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ---------- 1240px and below: type scale, first restacks ---------- */
+
+@media (max-width: 1240px) {
+  [style*="font-size: 82px"] {
+    font-size: 60px !important;
+  }
+
+  [style*="font-size: 40px"] {
+    font-size: 34px !important;
+  }
+
+  [style*="font-size: 36px"] {
+    font-size: 30px !important;
+  }
+
+  /* Experience: the tilted, absolutely positioned cards
+     become a simple stacked flow, in reading order */
+  [data-pencil-name="Frame 52"] {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    gap: 24px !important;
+  }
+
+  [data-pencil-name="Frame 52"] .exp-card {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+  }
+
+  [data-pencil-name="Frame 52"] .exp-card--left {
+    order: 1;
+  }
+
+  [data-pencil-name="Frame 52"] .exp-card--middle {
+    order: 2;
+  }
+
+  [data-pencil-name="Frame 52"] .exp-card--right {
+    order: 3;
+  }
+
+  [data-pencil-name="Frame 52"] .exp-ornament {
+    display: none !important;
+  }
+
+  /* Social galleries: fewer columns */
+  .asa-gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  /* Burjo: the absolute collage becomes a tidy grid */
+  [data-pencil-name="Frame 8897"] {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  [data-pencil-name="Frame 8897"] > div {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 245 / 319;
+    transform: none !important;
+  }
+
+  /* How I design: tighten the wide step spacing */
+  [data-pencil-name="Frame 8874"] {
+    gap: 72px !important;
+  }
+}
+
+/* ---------- 900px and below: unstick, un-absolute, hero fixes ---------- */
+
+@media (max-width: 900px) {
+  /* Project stack: the sticky pile becomes a normal card list */
+  .project-title-wrap {
+    height: auto !important;
+    margin-bottom: 0 !important;
+  }
+
+  .project-title-wrap > [data-pencil-name="Frame 42"] {
+    position: static !important;
+  }
+
+  .project-stack > [data-pencil-name] {
+    position: static !important;
+    height: auto !important;
+  }
+
+  .project-stack > div > [data-pencil-name="Frame"] {
+    display: none !important;
+  }
+
+  .project-stack > div > div:first-of-type {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Chatbot detail cards (Superindo, AyoSehat) flow in the page */
+  div:has(> [data-pencil-name="Frame 8853"]) {
+    height: auto !important;
+  }
+
+  [data-pencil-name="Frame 8853"] {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+  }
+
+  [data-pencil-name="Frame 8854"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* Phone mockups wrap and center instead of fanning out */
+  [data-pencil-name="Frame 8849"] {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 32px !important;
+  }
+
+  [data-pencil-name="Frame 8849"] > [data-pencil-name="Frame 8857"] > div + div {
+    margin-left: 0 !important;
+  }
+
+  /* Hero: avatar tucks into the top-right corner,
+     the sticker badge joins the normal flow */
+  [data-pencil-name="Avatar"] {
+    left: auto !important;
+    right: 0 !important;
+    width: 132px !important;
+    height: 132px !important;
+  }
+
+  [data-pencil-name="Frame 8865"] {
+    position: static !important;
+  }
+}
+
+/* ---------- 760px and below: project cards stack vertically ---------- */
+
+@media (max-width: 760px) {
+  .project-stack > div > div:first-of-type {
+    flex-direction: column !important;
+    padding: 36px 24px !important;
+    border-radius: 40px !important;
+  }
+
+  .project-stack [data-pencil-name="Image"] {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 347 / 280;
+  }
+
+  .exp-card,
+  [data-pencil-name="Frame 8853"] {
+    border-radius: 40px !important;
+  }
+}
+
+/* ---------- 720px and below: phones ---------- */
+
+@media (max-width: 720px) {
+  [style*="font-size: 82px"] {
+    font-size: 37px !important;
+    white-space: normal !important;
+  }
+
+  [style*="font-size: 40px"] {
+    font-size: 27px !important;
+  }
+
+  [style*="font-size: 36px"] {
+    font-size: 24px !important;
+  }
+
+  [style*="font-size: 32px"] {
+    font-size: 22px !important;
+  }
+
+  /* Slimmer fixed nav, smaller links */
+  [data-pencil-name="Frame 12"] {
+    padding-top: 24px !important;
+    padding-bottom: 16px !important;
+  }
+
+  [data-pencil-name="Frame 12"].is-stuck {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+
+  [data-pencil-name="Frame 11"] a[href],
+  [data-pencil-name="Frame 11"] a[href] * {
+    font-size: 15px !important;
+  }
+
+  [data-pencil-name="Avatar"] {
+    width: 96px !important;
+    height: 96px !important;
+  }
+
+  /* How I design: steps wrap, the connecting arrow retires */
+  [data-pencil-name="Frame 8874"] {
+    gap: 24px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  .how-section [data-pencil-name="Arrow 1"] {
+    display: none !important;
+  }
+
+  /* Footer doodle would spill over small screens */
+  [data-pencil-name="doodle-top-left"],
+  .doodle-top-left {
+    display: none !important;
+  }
+
+  .asa-gallery {
+    gap: 12px !important;
+  }
+
+  [data-pencil-name="Frame 8897"] {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px !important;
+  }
+
+  /* Safety net: any remaining fixed row may wrap */
+  [style*="flex-direction: row"] {
+    flex-wrap: wrap !important;
+  }
+}
