@@ -49,6 +49,12 @@ img {
   max-width: 100%;
 }
 
+/* Hamburger button exists only on small screens
+   (the button itself is injected by js/mobile-nav.js) */
+.mobile-nav-toggle {
+  display: none;
+}
+
 /* ---------- 1240px and below: type scale, first restacks ---------- */
 
 @media (max-width: 1240px) {
@@ -268,6 +274,70 @@ img {
   [data-pencil-name="Frame 11"] a[href],
   [data-pencil-name="Frame 11"] a[href] * {
     font-size: 15px !important;
+  }
+
+  /* Mobile nav: logo left, hamburger right, menu expands below */
+  .mobile-nav-toggle {
+    display: inline-flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    order: 2;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #363636;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  [data-pencil-name="Frame 12"].nav-open .mobile-nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  [data-pencil-name="Frame 12"].nav-open .mobile-nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  [data-pencil-name="Frame 12"].nav-open .mobile-nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  [data-pencil-name="Frame 12"].has-mobile-nav [data-pencil-name="Frame 11"] {
+    display: none !important;
+  }
+
+  [data-pencil-name="Frame 12"].nav-open [data-pencil-name="Frame 11"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    order: 3;
+    flex-basis: 100%;
+    padding: 20px 0 28px;
+  }
+
+  [data-pencil-name="Frame 12"].nav-open [data-pencil-name="Frame 11"] a[href] {
+    font-size: 17px !important;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mobile-nav-toggle span {
+      transition: none;
+    }
   }
 
   [data-pencil-name="Avatar"] {
