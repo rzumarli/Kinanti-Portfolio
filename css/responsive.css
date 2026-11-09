@@ -132,6 +132,19 @@ img {
 /* ---------- 900px and below: unstick, un-absolute, hero fixes ---------- */
 
 @media (max-width: 900px) {
+  /* Hero hugs its content instead of filling the viewport */
+  .hero-section {
+    min-height: 0 !important;
+    justify-content: flex-start !important;
+    gap: 36px !important;
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .hero-section > [data-pencil-name="Frame 19"] {
+    margin-top: 0 !important;
+  }
+
   /* Project stack: the sticky pile becomes a normal card list */
   .project-title-wrap {
     height: auto !important;
