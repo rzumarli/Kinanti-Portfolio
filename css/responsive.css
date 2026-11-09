@@ -176,6 +176,39 @@ img {
   [data-pencil-name="Frame 8874"] {
     gap: 72px !important;
   }
+
+  /* Hero: fixed-width headline pieces must not outgrow the screen.
+     Frame 3 is a fixed 778px row, the underline SVGs run 397-714px,
+     and the tagline is one nowrap line: together they pushed the
+     whole page layout wider than the phone. */
+  .hero-section [data-pencil-name="Frame 19"] {
+    overflow-x: clip;
+  }
+
+  .hero-section [data-pencil-name="Frame 18"] > * {
+    max-width: 100% !important;
+  }
+
+  .hero-section [data-pencil-name="Frame 3"] {
+    width: 100% !important;
+  }
+
+  .hero-section svg[data-pencil-name^="Line"] {
+    max-width: 100% !important;
+  }
+
+  .hero-section
+    [data-pencil-name="I explore problems, uncover insights, and design with purpose."] {
+    white-space: normal !important;
+  }
+
+  /* Avatar keeps its desktop spot only on wide screens */
+  .hero-section [data-pencil-name="Avatar"] {
+    left: auto !important;
+    right: 0 !important;
+    width: 150px !important;
+    height: 150px !important;
+  }
 }
 
 /* ---------- 900px and below: unstick, un-absolute, hero fixes ---------- */
@@ -399,14 +432,6 @@ img {
   [data-pencil-name="Avatar"] {
     width: 96px !important;
     height: 96px !important;
-  }
-
-  /* Experience cards fill their container edge to edge:
-     the stage breaks out of the page side padding */
-  [data-pencil-name="Frame 52"] {
-    width: calc(100% + 2 * clamp(20px, 6.42vw, 97px)) !important;
-    margin-left: calc(-1 * clamp(20px, 6.42vw, 97px)) !important;
-    margin-right: calc(-1 * clamp(20px, 6.42vw, 97px)) !important;
   }
 
   /* How I design: steps wrap, the connecting arrow retires */
