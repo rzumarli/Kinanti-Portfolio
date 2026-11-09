@@ -401,6 +401,14 @@ img {
     height: 96px !important;
   }
 
+  /* Experience cards fill their container edge to edge:
+     the stage breaks out of the page side padding */
+  [data-pencil-name="Frame 52"] {
+    width: calc(100% + 2 * clamp(20px, 6.42vw, 97px)) !important;
+    margin-left: calc(-1 * clamp(20px, 6.42vw, 97px)) !important;
+    margin-right: calc(-1 * clamp(20px, 6.42vw, 97px)) !important;
+  }
+
   /* How I design: steps wrap, the connecting arrow retires */
   [data-pencil-name="Frame 8874"] {
     gap: 24px !important;
