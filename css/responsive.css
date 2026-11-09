@@ -249,15 +249,28 @@ img {
   }
 
   [style*="font-size: 40px"] {
-    font-size: 27px !important;
+    font-size: 30px !important;
   }
 
   [style*="font-size: 36px"] {
-    font-size: 24px !important;
+    font-size: 26px !important;
   }
 
   [style*="font-size: 32px"] {
-    font-size: 22px !important;
+    font-size: 24px !important;
+  }
+
+  [style*="font-size: 24px"] {
+    font-size: 20px !important;
+  }
+
+  [style*="font-size: 16.161px"] {
+    font-size: 18px !important;
+  }
+
+  /* Micro labels and chips were 12px on desktop: too small on phones */
+  [style*="font-size: 12px"] {
+    font-size: 14px !important;
   }
 
   /* Slimmer fixed nav, smaller links */
