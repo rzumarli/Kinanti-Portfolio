@@ -1140,3 +1140,16 @@ img {
     justify-content: center !important;
   }
 }
+
+/* ---------- ASA gallery: vertical stack (phones) ----------
+   Website shows 3 per row; on phones the 12 images become one
+   full-width column, each tile filling the 345px container. */
+
+@media (max-width: 720px) {
+  .asa-gallery {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: min(345px, 100%) !important;
+    margin-inline: auto !important;
+  }
+}
