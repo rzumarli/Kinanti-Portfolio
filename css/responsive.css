@@ -831,3 +831,51 @@ img {
     width: 100% !important;
   }
 }
+
+/* ---------- Project cards: his mobile layout (UIUX_Project export) ----------
+   345px column cards, square image, full-width lime button.
+   Ornaments stay exactly as the website (desktop) version: same
+   301px watermark art and rotation, anchored to the right edge
+   the same way (desktop left 1058 of a 1318 panel = right -41px). */
+
+@media (max-width: 720px) {
+  .project-stack > div > div:first-of-type {
+    width: min(345px, 100%) !important;
+    margin-inline: auto !important;
+    padding: 24px !important;
+    border-radius: 50px !important;
+    overflow: hidden !important;
+  }
+
+  .project-stack > div > div:first-of-type > svg[data-pencil-name="Vector"] {
+    left: auto !important;
+    right: -41px !important;
+    top: 54px !important;
+  }
+
+  .project-stack [data-pencil-name="Image"] {
+    aspect-ratio: 1 / 1;
+    height: auto !important;
+    border-radius: 51px !important;
+  }
+
+  .project-stack [data-pencil-name="Rectangle 16"] {
+    width: min(297px, 100%) !important;
+    left: 0 !important;
+  }
+
+  .project-stack [data-pencil-name="Frame 8826"] {
+    gap: 32px !important;
+  }
+
+  .project-stack
+    [data-pencil-name="Frame 8826"]
+    > [data-pencil-name="Frame 55"] {
+    gap: 4px !important;
+  }
+
+  .project-stack [data-pencil-name="Primary button"] {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
