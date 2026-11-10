@@ -852,18 +852,22 @@ img {
   }
 }
 
-/* ---------- Project cards: his mobile layout (UIUX_Project export) ----------
-   345px column cards, square image, full-width lime button.
-   Ornaments stay exactly as the website (desktop) version: same
-   301px watermark art and rotation, anchored to the right edge
-   the same way (desktop left 1058 of a 1318 panel = right -41px). */
+/* ---------- Project cards: his mobile layout (UIUX_Project exports) ----------
+   345px column cards, full-width lime button. Rounded corners now
+   follow his UIUX_Project-2 export (Craft nested radius): card
+   radius 32 with 16px padding, image radius 20 and his 313x297
+   frame. The sparkle watermark stays exactly as the website
+   (desktop) version: same 301px art and rotation, anchored to the
+   right edge the same way (desktop left 1058 of a 1318 panel =
+   right -41px). His Blue / Orange / Pink squiggles (two per card,
+   hidden by the 1240px layer) hang over the card's top edge. */
 
 @media (max-width: 720px) {
   .project-stack > div > div:first-of-type {
     width: min(345px, 100%) !important;
     margin-inline: auto !important;
-    padding: 24px !important;
-    border-radius: 50px !important;
+    padding: 16px !important;
+    border-radius: 32px !important;
     overflow: hidden !important;
   }
 
@@ -874,13 +878,13 @@ img {
   }
 
   .project-stack [data-pencil-name="Image"] {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 313 / 297;
     height: auto !important;
-    border-radius: 51px !important;
+    border-radius: 20px !important;
   }
 
   .project-stack [data-pencil-name="Rectangle 16"] {
-    width: min(297px, 100%) !important;
+    width: 100% !important;
     left: 0 !important;
   }
 
@@ -897,6 +901,44 @@ img {
   .project-stack [data-pencil-name="Primary button"] {
     width: 100% !important;
     justify-content: center !important;
+  }
+
+  /* Objective list fills the container: the list and its rows take
+     the full card width and long items wrap instead of running off
+     the card on one nowrap line */
+  .project-stack
+    [data-pencil-name="Frame 37"]
+    [data-pencil-name="Frame 50"] {
+    width: 100% !important;
+  }
+
+  .project-stack [data-pencil-name="Frame 50"] > div {
+    width: 100% !important;
+  }
+
+  .project-stack [data-pencil-name="Frame 50"] > div > div:last-child {
+    white-space: normal !important;
+    min-width: 0;
+  }
+
+  /* His squiggle ornaments (Blue #2185E3 / Orange #F85C36 /
+     Pink #FE7FC4, two per card in the card's colour) join the
+     mobile version: the 1240px layer hides these frames; here
+     they hang over the card's top edge, left and right, inside
+     the 28px gap above each card */
+  .project-stack > div > [data-pencil-name="Frame"] {
+    display: block !important;
+    top: -27px !important;
+    z-index: 5;
+  }
+
+  .project-stack > div > [data-pencil-name="Frame"]:nth-of-type(2) {
+    left: 24px !important;
+  }
+
+  .project-stack > div > [data-pencil-name="Frame"]:nth-of-type(3) {
+    left: auto !important;
+    right: 24px !important;
   }
 }
 
