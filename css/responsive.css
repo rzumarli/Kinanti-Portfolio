@@ -1029,3 +1029,114 @@ img {
     }
   }
 }
+
+/* ---------- How I design: vertical timeline (phones) ----------
+   His mobile base: steps descend in one column, a sky line runs
+   down the left with the pink triangle marker at each step, and
+   the number, title and description sit to its right.
+   The desktop horizontal rail (Frame 8874) is hidden here; the
+   markers below reuse the exact clip-path and color of the
+   desktop Polygons, so the ornament is identical, only vertical.
+   Step content (01 to 05) is untouched. */
+
+@media (max-width: 720px) {
+  [data-pencil-name="Frame 8876"] {
+    width: min(345px, 100%) !important;
+    margin-inline: auto !important;
+  }
+
+  [data-pencil-name="Every project is different, but here's my usual approach:"] {
+    font-size: 20px !important;
+  }
+
+  [data-pencil-name="Frame 8885"] > [data-pencil-name="Frame 8874"] {
+    display: none !important;
+  }
+
+  [data-pencil-name="Frame 8885"] > [data-pencil-name="Frame 8869"] {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 56px !important;
+  }
+
+  [data-pencil-name="Frame 8885"] > [data-pencil-name="Frame 8869"] > div {
+    position: relative !important;
+    width: 100% !important;
+    padding: 0 0 0 84px !important;
+  }
+
+  /* pink triangle marker, same clip-path as the desktop Polygons */
+  [data-pencil-name="Frame 8885"] > [data-pencil-name="Frame 8869"] > div::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #fe7fc4;
+    clip-path: path("M14.457 9.6 C15.601 7.62 17.714 6.4 20 6.4 C22.286 6.4 24.399 7.62 25.543 9.6 L31.778 20.4 C32.921 22.38 32.921 24.82 31.778 26.8 C30.635 28.78 28.522 30 26.235 30 L13.765 30 C11.478 30 9.365 28.78 8.222 26.8 C7.079 24.82 7.079 22.38 8.222 20.4 L14.457 9.6 Z");
+    transform: rotate(90deg);
+    z-index: 1;
+  }
+
+  /* sky line segment: from this marker down to the next one */
+  [data-pencil-name="Frame 8885"] > [data-pencil-name="Frame 8869"] > div::after {
+    content: "";
+    position: absolute;
+    left: 32px;
+    top: 20px;
+    width: 1px;
+    height: calc(100% - 20px + 56px);
+    background-color: #91caff;
+    z-index: 0;
+  }
+
+  [data-pencil-name="Frame 8885"]
+    > [data-pencil-name="Frame 8869"]
+    > div:last-child::after {
+    display: none;
+  }
+}
+
+/* ---------- ASA content: same layout as Burjoempa (phones) ----------
+   about and account stacked in the 345px column, full-width
+   lime button, exactly like the Burjoempa block above it. */
+
+@media (max-width: 720px) {
+  [data-pencil-name="Macbook 14\""] > [data-pencil-name="Frame 8902"]
+    > [data-pencil-name="Frame 8899"] {
+    flex-direction: column !important;
+    width: min(345px, 100%) !important;
+    margin-inline: auto !important;
+    gap: 24px !important;
+  }
+
+  [data-pencil-name="Macbook 14\""]
+    > [data-pencil-name="Frame 8902"]
+    [data-pencil-name="Frame 8902"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    gap: 24px !important;
+  }
+
+  [data-pencil-name="Macbook 14\""]
+    > [data-pencil-name="Frame 8902"]
+    [data-pencil-name="Frame 8840"] {
+    width: 100% !important;
+  }
+
+  [data-pencil-name="Macbook 14\""]
+    > [data-pencil-name="Frame 8902"]
+    [data-pencil-name="Frame 8903"] {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  [data-pencil-name="Macbook 14\""]
+    > [data-pencil-name="Frame 8902"]
+    [data-pencil-name="Primary button"] {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
