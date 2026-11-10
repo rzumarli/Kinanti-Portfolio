@@ -1154,26 +1154,76 @@ img {
   }
 }
 
-/* ---------- Tools marquee: mobile version (phones) ----------
-   The strip keeps sliding, sized for phones: full-width stage
-   76px tall, each slide 800px wide so the logos stay legible
-   (the strip is 2004 x 145, so 800 wide renders it about 55px
-   tall), and the loop runs at about the desktop speed. */
+/* ---------- Tools: tile marquee (phones) ----------
+   His mobile layout: the tools become individual tiles
+   (110px white rounded squares) that keep sliding in a
+   seamless loop, replacing the single strip image.
+   Tile artwork is the website's own: the Figma vector plus
+   the ten logos extracted from tools.svg, in strip order.
+   Five tiles are full-bleed icons, the rest are centered
+   logos at the same sizes as his export. */
+
+.tools-tiles {
+  display: none;
+}
 
 @media (max-width: 720px) {
   .tools-marquee {
-    width: 100% !important;
-    margin-left: 0 !important;
-    height: 76px !important;
+    display: none !important;
   }
 
-  .tools-marquee-track {
-    width: max-content !important;
-    animation-duration: 22s;
+  .tools-tiles {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding: 6px 0;
   }
 
-  .tools-marquee-slide {
-    width: 800px !important;
+  .tools-tiles-track {
+    display: flex;
+    width: max-content;
+    animation: tools-tiles-slide 40s linear infinite;
+    will-change: transform;
+  }
+
+  .tool-tile {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 22px;
+    display: flex;
+    flex: none;
+    height: 110px;
+    justify-content: center;
+    margin-right: 40px;
+    overflow: hidden;
+    width: 110px;
+  }
+
+  .tool-tile.cover img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .tool-tile img {
+    display: block;
+    object-fit: contain;
+  }
+
+  @keyframes tools-tiles-slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tools-tiles-track {
+      animation: none;
+    }
   }
 }
 
@@ -1213,5 +1263,18 @@ img {
     width: min(297px, 100%) !important;
     margin-inline: auto !important;
     gap: 0px !important;
+  }
+}
+
+/* ---------- Social subsection titles (phones) ----------
+   burjoempa and ASA CX Consulting fill the same 345px
+   container as their content, instead of the full section
+   width. */
+
+@media (max-width: 720px) {
+  [data-pencil-name="burjoempa"],
+  [data-pencil-name="ASA CX Consulting"] {
+    width: min(345px, 100%) !important;
+    margin-inline: auto !important;
   }
 }
