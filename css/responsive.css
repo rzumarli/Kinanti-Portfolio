@@ -691,3 +691,87 @@ img {
     justify-content: center !important;
   }
 }
+
+/* ---------- Experience cards: mobile design (Card.html) ---------- */
+
+@media (max-width: 720px) {
+  /* room for the ribbon star hanging above each card */
+  [data-pencil-name="Frame 52"] {
+    gap: 58px !important;
+    padding-top: 30px !important;
+  }
+
+  [data-pencil-name="Frame 52"] .exp-card {
+    width: min(345px, 100%) !important;
+    margin-inline: auto !important;
+    border-radius: 48px !important;
+    padding: 32px !important;
+    overflow: visible !important;
+  }
+
+  /* ribbon: orange star (Star_2) hanging over the top centre edge */
+  [data-pencil-name="Frame 52"] .exp-card::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -29px;
+    width: 58px;
+    height: 51px;
+    transform: translateX(-50%) rotate(14deg);
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2088%2078%27%3E%3Cpath%20d%3D%27M40.2067%202.68516C40.9943%20-0.895145%2046.0994%20-0.895157%2046.887%202.68515L51.1005%2021.8391C51.5677%2023.9629%2053.8723%2025.1171%2055.8528%2024.2192L75.1075%2015.4898C78.5797%2013.9156%2081.6347%2018.3452%2078.9293%2021.0315L66.3505%2033.5214C64.5795%2035.2799%2065.2275%2038.2817%2067.5662%2039.1531L84.8631%2045.5976C88.4947%2046.9506%2087.4304%2052.3475%2083.557%2052.2205L63.6127%2051.5668C61.2575%2051.4896%2059.5317%2053.7616%2060.2379%2056.0098L65.6886%2073.3623C66.8024%2076.9079%2062.2579%2079.435%2059.8336%2076.618L46.1391%2060.7055C44.7746%2059.12%2042.3192%2059.12%2040.9547%2060.7055L27.2601%2076.6181C24.8359%2079.435%2020.2914%2076.9079%2021.4051%2073.3623L26.8559%2056.0098C27.5621%2053.7616%2025.8363%2051.4896%2023.481%2051.5668L3.53674%2052.2205C-0.336666%2052.3475%20-1.40096%2046.9506%202.23065%2045.5976L19.5276%2039.1531C21.8663%2038.2817%2022.5143%2035.2799%2020.7433%2033.5214L8.16441%2021.0315C5.45906%2018.3452%208.51401%2013.9156%2011.9863%2015.4898L31.2409%2024.2192C33.2214%2025.1171%2035.526%2023.9629%2035.9932%2021.8391L40.2067%202.68516Z%27%20fill%3D%27%23F85C36%27%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 6;
+    pointer-events: none;
+  }
+
+  /* keep the design sizes inside cards (undo the global phone shrink) */
+  [data-pencil-name="Frame 52"] .exp-card [style*="font-size: 32px"] {
+    font-size: 32px !important;
+  }
+
+  [data-pencil-name="Frame 52"] .exp-card [style*="font-size: 20px"] {
+    font-size: 20px !important;
+  }
+
+  /* core skills back to a single column, as in Card.html */
+  .exp-card [data-pencil-name="Frame 50"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  /* per-card watermark geometry restored to the export values
+     (the 1240px layer parks every vector at the bottom right) */
+  [data-pencil-name="Frame 52"] .exp-card--right > svg[data-pencil-name="Vector"] {
+    left: 479.683px !important;
+    top: 166.514px !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 288.127px !important;
+    height: 240.469px !important;
+  }
+
+  [data-pencil-name="Frame 52"] .exp-card--right > svg[data-pencil-name="Vector"] path {
+    fill: #ffffff !important;
+  }
+
+  [data-pencil-name="Frame 52"] .exp-card--middle > svg[data-pencil-name="Vector"] {
+    left: 43.05px !important;
+    top: 43.05px !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 199.5px !important;
+    height: 199.5px !important;
+  }
+
+  [data-pencil-name="Frame 52"] .exp-card--left > svg[data-pencil-name="Vector"] {
+    left: 248.885px !important;
+    top: 192.204px !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 301px !important;
+    height: 301px !important;
+  }
+}
