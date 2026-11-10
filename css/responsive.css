@@ -568,6 +568,12 @@ img {
     z-index: 3;
   }
 
+  /* Keep the pill text at its true 16.161px like the original
+     badge (the 1240px layer bumps 16.161px texts to 18px) */
+  .hero-section .avatar-pill [style*="font-size: 16.161px"] {
+    font-size: 16.161px !important;
+  }
+
   .hero-section [data-pencil-name="Ellipse 138"] {
     width: 186px !important;
     height: 186px !important;
@@ -941,7 +947,13 @@ img {
      Pink #FE7FC4, two per card in the card's colour) join the
      mobile version: the 1240px layer hides these frames; here
      they hang over the card's top edge, left and right, inside
-     the 28px gap above each card */
+     the 28px gap above each card. The wrapper must be the
+     positioning context, or top:-27px anchors to the whole
+     stack instead of the card. */
+  .project-stack > [data-pencil-name] {
+    position: relative !important;
+  }
+
   .project-stack > div > [data-pencil-name="Frame"] {
     display: block !important;
     top: -27px !important;
