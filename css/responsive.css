@@ -879,3 +879,72 @@ img {
     justify-content: center !important;
   }
 }
+
+/* ---------- Chatbot cards: his mobile layout (Chatbot_Development export) ----------
+   Applied to both cards (Super Indo and AyoSehat, same structure).
+   Ornaments stay exactly as the website (desktop) version: the big
+   watermark illustrations keep their art, size and placement. */
+
+@media (max-width: 720px) {
+  /* Card shell: 345px column, radius 32, padding 24 */
+  [data-pencil-name="Frame 8858"] > [data-pencil-name="Frame 8853"],
+  [data-pencil-name="Frame 8857"] > [data-pencil-name="Frame 8853"] {
+    width: min(345px, 100%) !important;
+    margin-inline: auto !important;
+    padding: 24px !important;
+    border-radius: 32px !important;
+    overflow: hidden !important;
+  }
+
+  /* Overview and background stack, gap 24 */
+  [data-pencil-name="Frame 8854"] {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    gap: 24px !important;
+  }
+
+  [data-pencil-name="Frame 8854"] > [data-pencil-name="Frame 8837"],
+  [data-pencil-name="Frame 8854"] > [data-pencil-name="Frame 8840"] {
+    width: 100% !important;
+  }
+
+  /* Mockups above the info column, gap 32 */
+  [data-pencil-name="Frame 8849"] {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 32px !important;
+  }
+
+  /* Phone strip: one row, gap 16, clipped at the content edge
+     (first phone full, the next one peeks) */
+  [data-pencil-name="Frame 8849"] > [data-pencil-name="Frame 8857"],
+  [data-pencil-name="Frame 8849"] > [data-pencil-name="Frame 8856"] {
+    width: 100% !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 16px !important;
+  }
+
+  /* AyoSehat phones take the same 218px width as the Super Indo ones
+     (same aspect ratio, so the screenshots scale cleanly) */
+  [data-pencil-name="Frame 8856"] > div {
+    width: 218.113px !important;
+    height: 441.218px !important;
+  }
+
+  /* Info column (My role, Flows, tools, Access) full width */
+  [data-pencil-name="Frame 8849"] > [data-pencil-name="Frame 8853"] {
+    width: 100% !important;
+  }
+
+  [data-pencil-name="Frame 8855"] {
+    flex-direction: column !important;
+  }
+
+  [data-pencil-name="Frame 8855"] > div {
+    width: 100% !important;
+  }
+}
