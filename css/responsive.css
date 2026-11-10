@@ -522,6 +522,11 @@ img {
 @media (max-width: 720px) {
   .hero-section {
     gap: 24px !important;
+    /* the fixed nav is 80px tall with an opaque cream background;
+       the hero used to start at 36px, so the nav sliced the top
+       44px off the avatar. Start right below the nav instead:
+       80px nav + 12px breathing room. */
+    padding-top: 92px !important;
   }
 
   /* The 345px column, centered */
