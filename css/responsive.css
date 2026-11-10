@@ -1153,3 +1153,26 @@ img {
     margin-inline: auto !important;
   }
 }
+
+/* ---------- Tools marquee: mobile version (phones) ----------
+   The strip keeps sliding, sized for phones: full-width stage
+   76px tall, each slide 800px wide so the logos stay legible
+   (the strip is 2004 x 145, so 800 wide renders it about 55px
+   tall), and the loop runs at about the desktop speed. */
+
+@media (max-width: 720px) {
+  .tools-marquee {
+    width: 100% !important;
+    margin-left: 0 !important;
+    height: 76px !important;
+  }
+
+  .tools-marquee-track {
+    width: max-content !important;
+    animation-duration: 22s;
+  }
+
+  .tools-marquee-slide {
+    width: 800px !important;
+  }
+}
