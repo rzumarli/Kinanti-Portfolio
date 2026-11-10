@@ -831,6 +831,9 @@ img {
     font-size: 40px !important;
     width: 100% !important;
     text-align: left !important;
+    /* fill the container: long titles wrap inside the 345px column
+       instead of spilling past it on one nowrap line */
+    white-space: normal !important;
   }
 
   [data-pencil-name="Frame 13"] > svg[data-pencil-name="Line 2"],
