@@ -789,3 +789,45 @@ img {
     height: 301px !important;
   }
 }
+
+/* ---------- Section dividers: mobile layout (title over hairline) ---------- */
+
+@media (max-width: 720px) {
+  /* the six section headers become the 345px column from his divider spec:
+     Silkscreen title on top, hairline below at full column width */
+  [data-pencil-name="Frame 13"],
+  [data-pencil-name="Frame 42"],
+  [data-pencil-name="Frame 8834"],
+  [data-pencil-name="Frame 8859"],
+  [data-pencil-name="Frame 8889"],
+  [data-pencil-name="Frame 8877"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    height: auto !important;
+    width: min(345px, 100%) !important;
+    margin-inline: auto !important;
+    gap: 12px !important;
+  }
+
+  [data-pencil-name="Frame 13"] [style*="font-size: 40px"],
+  [data-pencil-name="Frame 42"] [style*="font-size: 40px"],
+  [data-pencil-name="Frame 8834"] [style*="font-size: 40px"],
+  [data-pencil-name="Frame 8859"] [style*="font-size: 40px"],
+  [data-pencil-name="Frame 8889"] [style*="font-size: 40px"],
+  [data-pencil-name="Frame 8877"] [style*="font-size: 40px"] {
+    font-size: 40px !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  [data-pencil-name="Frame 13"] > svg[data-pencil-name="Line 2"],
+  [data-pencil-name="Frame 42"] > svg[data-pencil-name="Line 2"],
+  [data-pencil-name="Frame 8834"] > svg[data-pencil-name="Line 2"],
+  [data-pencil-name="Frame 8859"] > svg[data-pencil-name="Line 2"],
+  [data-pencil-name="Frame 8889"] > svg[data-pencil-name="Line 2"],
+  [data-pencil-name="Frame 8877"] > svg[data-pencil-name="Line 2"] {
+    flex: none !important;
+    width: 100% !important;
+  }
+}
