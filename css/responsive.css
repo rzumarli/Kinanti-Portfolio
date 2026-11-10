@@ -1176,3 +1176,42 @@ img {
     width: 800px !important;
   }
 }
+
+/* ---------- Footer: his mobile layout (phones) ----------
+   Cream section keeps bleeding full width; inside it the
+   content becomes a 297px column: pink brand card on top with
+   the orange sticker badge hanging over its top-right corner,
+   then Connect, Explore and Based in stacked, and the bottom
+   row (logo, copyright, Contact me) stacked at the start. */
+
+@media (max-width: 720px) {
+  #contact {
+    padding: 32px 24px !important;
+  }
+
+  [data-pencil-name="footer-top"] {
+    flex-direction: column !important;
+    width: min(297px, 100%) !important;
+    margin-inline: auto !important;
+    gap: 24px !important;
+  }
+
+  [data-pencil-name="footer-top"] > [data-pencil-name="brand"] {
+    width: 100% !important;
+    padding: 24px !important;
+  }
+
+  [data-pencil-name="brand"] [data-pencil-name="Frame 8863"] {
+    left: 165.645px !important;
+    top: -22px !important;
+    transform: rotate(11.769deg) !important;
+  }
+
+  [data-pencil-name="footer-bottom"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: min(297px, 100%) !important;
+    margin-inline: auto !important;
+    gap: 0px !important;
+  }
+}
