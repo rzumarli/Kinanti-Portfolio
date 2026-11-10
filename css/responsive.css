@@ -512,8 +512,9 @@ img {
   }
 }
 
-/* Floating UI/UX Designer pill on the avatar: mobile only */
-.avatar-pill {
+/* Floating badge pills on the avatar: mobile only */
+.avatar-pill,
+.avatar-pill-3yoe {
   display: none !important;
 }
 
@@ -574,12 +575,24 @@ img {
     font-size: 16.161px !important;
   }
 
-  /* On mobile the pill lives only on the avatar: hide the
-     original in the badge row (the pink 3 yoe pill stays) */
-  .hero-section
-    [data-pencil-name="Frame 8865"]
-    [data-pencil-name="Frame 8863"] {
+  /* On mobile both badge pills live on the avatar instead:
+     hide the whole badge row so no empty strip remains */
+  .hero-section [data-pencil-name="Frame 8865"] {
     display: none !important;
+  }
+
+  /* The pink 3 yoe pill keeps its exact offset from the orange
+     pill (badge row geometry: +158.5 left, -20.8 top), rotated
+     10.459deg, overlapping the orange pill's top-right corner */
+  .hero-section .avatar-pill-3yoe {
+    display: flex !important;
+    left: 66px !important;
+    top: 142px !important;
+    z-index: 4;
+  }
+
+  .hero-section .avatar-pill-3yoe [style*="font-size: 12px"] {
+    font-size: 12px !important;
   }
 
   .hero-section [data-pencil-name="Ellipse 138"] {
