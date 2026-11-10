@@ -561,11 +561,14 @@ img {
   /* His orange UI/UX Designer pill, floating as a sticker on the
      avatar's bottom-left edge (his marked spot): half on the
      photo, half off its left edge */
+  /* Position and rotation: his saved layout from the Editor
+     Posisi Hero artifact, 2026-11-10 (avatar-relative) */
   .hero-section .avatar-pill {
     display: flex !important;
-    left: -92px !important;
-    top: auto !important;
-    bottom: -18px !important;
+    left: -83.2px !important;
+    top: 164.4px !important;
+    bottom: auto !important;
+    transform: rotate(0.4deg) !important;
     z-index: 3;
   }
 
@@ -586,8 +589,9 @@ img {
      10.459deg, overlapping the orange pill's top-right corner */
   .hero-section .avatar-pill-3yoe {
     display: flex !important;
-    left: 66px !important;
+    left: 68.4px !important;
     top: 142px !important;
+    transform: rotate(10.5deg) !important;
     z-index: 4;
   }
 
