@@ -512,6 +512,11 @@ img {
   }
 }
 
+/* Floating UI/UX Designer pill on the avatar: mobile only */
+.avatar-pill {
+  display: none !important;
+}
+
 /* ---------- Mobile hero: Pencil structure, 345px (2026-11-09) ----------
    Rahmat's pasted mobile hero frame, applied at phone widths.
    Order inside Frame 19 becomes: Avatar, headline, description,
@@ -550,6 +555,17 @@ img {
     width: 186px !important;
     height: 186px !important;
     flex-shrink: 0;
+  }
+
+  /* His orange UI/UX Designer pill, floating as a sticker on the
+     avatar's bottom-left edge (his marked spot): half on the
+     photo, half off its left edge */
+  .hero-section .avatar-pill {
+    display: flex !important;
+    left: -92px !important;
+    top: auto !important;
+    bottom: -18px !important;
+    z-index: 3;
   }
 
   .hero-section [data-pencil-name="Ellipse 138"] {
