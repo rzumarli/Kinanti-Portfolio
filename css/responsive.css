@@ -892,6 +892,12 @@ img {
   }
 }
 
+/* Swipe indicator dots exist in the DOM at every width but are
+   only shown on phones, where the strips are swipeable */
+.phone-strip-dots {
+  display: none;
+}
+
 /* ---------- Chatbot cards: his mobile layout (Chatbot_Development export) ----------
    Applied to both cards (Super Indo and AyoSehat, same structure).
    Ornaments stay exactly as the website (desktop) version: the big
@@ -953,6 +959,36 @@ img {
   [data-pencil-name="Frame 8849"] .superindo-phone,
   [data-pencil-name="Frame 8849"] .ayosehat-phone {
     scroll-snap-align: start;
+  }
+
+  /* Swipe indicator dots under each phone strip (built by
+     js/phone-strip-dots.js): inactive dots are faint ink circles,
+     the active one stretches into an ink pill */
+  .phone-strip-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: -16px;
+  }
+
+  .phone-strip-dots button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    padding: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 99px;
+    background-color: rgba(54, 54, 54, 0.25);
+    cursor: pointer;
+    transition: width 0.3s ease, background-color 0.3s ease;
+  }
+
+  .phone-strip-dots button.is-active {
+    width: 22px;
+    background-color: #363636;
   }
 
   /* AyoSehat phones take the same 218px width as the Super Indo ones
