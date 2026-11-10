@@ -1457,3 +1457,25 @@ img {
     padding-top: 148px !important;
   }
 }
+
+/* ---------- 721-1240px: headline rows must fit their lines ----------
+   Each row of Frame 18 is [fixed-width Line] + [word] + [fixed-width
+   Line], sized for the 1512px canvas (row totals 1195-1313px). Below
+   desktop the lines could not shrink (flex-shrink: 0 inline), so they
+   shoved the words past the right edge and Frame 19 clipped them:
+   row 3's word starts after Line 5 (397px) and was cut from about
+   1150px viewport down, row 2's tail was cut at 768px. Let every
+   flanking line shrink (flex distributes the shrink by width, so
+   their length ratios survive) and let Frame 3 hug its content like
+   Frames 1 and 2 (fit-content) instead of the width: 100% forced by
+   the <=1240 layer. Desktop (>1240) and phone (<=720) untouched. */
+@media (min-width: 721px) and (max-width: 1240px) {
+  .hero-section [data-pencil-name="Frame 18"] svg[data-pencil-name^="Line"] {
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .hero-section [data-pencil-name="Frame 3"] {
+    width: auto !important;
+  }
+}
