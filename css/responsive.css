@@ -1444,3 +1444,16 @@ img {
     margin-inline: auto !important;
   }
 }
+
+/* ---------- 721-900px (tablets, unfolded foldables): nav clearance ----------
+   In this band the hero starts at padding-top:36px and the Avatar sits
+   at top:14px inside Frame 19, so the fixed desktop nav (60+40px
+   padding plus its content row, opaque cream) covers the top of the
+   132px avatar. Same failure the phone band fixed with 92px; here the
+   nav is the taller desktop one, so push the whole hero down and keep
+   the internal composition untouched. */
+@media (min-width: 721px) and (max-width: 900px) {
+  .hero-section {
+    padding-top: 148px !important;
+  }
+}
