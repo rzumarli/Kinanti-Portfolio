@@ -574,6 +574,14 @@ img {
     font-size: 16.161px !important;
   }
 
+  /* On mobile the pill lives only on the avatar: hide the
+     original in the badge row (the pink 3 yoe pill stays) */
+  .hero-section
+    [data-pencil-name="Frame 8865"]
+    [data-pencil-name="Frame 8863"] {
+    display: none !important;
+  }
+
   .hero-section [data-pencil-name="Ellipse 138"] {
     width: 186px !important;
     height: 186px !important;
