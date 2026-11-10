@@ -929,15 +929,30 @@ img {
     gap: 32px !important;
   }
 
-  /* Phone strip: one row, gap 16, clipped at the content edge
-     (first phone full, the next one peeks) */
+  /* Phone strip: one row the reader swipes sideways, gap 16,
+     scroll snap per phone; the next phone peeks as the hint.
+     Scrollbar hidden, vertical page scroll still passes through. */
   [data-pencil-name="Frame 8849"] > [data-pencil-name="Frame 8857"],
   [data-pencil-name="Frame 8849"] > [data-pencil-name="Frame 8856"] {
     width: 100% !important;
-    overflow: hidden !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
     flex-wrap: nowrap !important;
     justify-content: flex-start !important;
     gap: 16px !important;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  [data-pencil-name="Frame 8849"] > [data-pencil-name="Frame 8857"]::-webkit-scrollbar,
+  [data-pencil-name="Frame 8849"] > [data-pencil-name="Frame 8856"]::-webkit-scrollbar {
+    display: none;
+  }
+
+  [data-pencil-name="Frame 8849"] .superindo-phone,
+  [data-pencil-name="Frame 8849"] .ayosehat-phone {
+    scroll-snap-align: start;
   }
 
   /* AyoSehat phones take the same 218px width as the Super Indo ones
