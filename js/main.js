@@ -6,7 +6,14 @@
 
         function fitToViewport() {
           var viewportWidth = document.documentElement.clientWidth;
-          var scale = Math.min(1, viewportWidth / DESIGN_WIDTH);
+          // The zoom only exists to fit the fixed 1512px desktop canvas
+          // into narrower desktop windows. At 1240px and below, the
+          // responsive stylesheet lays the page out fluidly, and zooming
+          // there shrinks that layout to a fraction of its real size.
+          var scale =
+            viewportWidth > 1240
+              ? Math.min(1, viewportWidth / DESIGN_WIDTH)
+              : 1;
           document.documentElement.style.zoom = scale;
 
           // The page is scaled with CSS zoom, so 100vh no longer matches the
