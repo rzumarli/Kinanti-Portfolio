@@ -1201,14 +1201,14 @@ img {
   .tool-tile {
     align-items: center;
     background-color: #ffffff;
-    border-radius: 22px;
+    border-radius: 18px;
     display: flex;
     flex: none;
-    height: 110px;
+    height: 88px;
     justify-content: center;
     margin-right: 40px;
     overflow: hidden;
-    width: 110px;
+    width: 88px;
   }
 
   .tool-tile.cover img {
