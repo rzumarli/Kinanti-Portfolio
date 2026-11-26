@@ -52,6 +52,18 @@ body.sv-on ul,body.sv-on li{outline:1px dotted rgba(120,72,20,.8)!important;outl
 #sv-labels{position:absolute;inset:0;pointer-events:none;z-index:999998;display:none}
 body.sv-labels-on #sv-labels{display:block}
 .sv-lbl{position:absolute;font:600 10px/1.3 ui-monospace,Menlo,monospace;background:#1d1d1d;color:#fff;padding:1px 5px;border-radius:4px;white-space:nowrap;transform:translateY(-100%)}
+
+#sv-dims{position:absolute;inset:0;pointer-events:none;z-index:999997;display:none}
+body.sv-dims-on #sv-dims{display:block}
+.sv-dim{position:absolute;color:#e30613}
+.sv-dim-w{border-top:1.5px solid #e30613;height:0}
+.sv-dim-h{border-left:1.5px solid #e30613;width:0}
+.sv-dim .sv-tick{position:absolute;background:#e30613;display:block}
+.sv-dim-w .sv-tick{width:1.5px;height:7px;top:-4px}
+.sv-dim-h .sv-tick{height:1.5px;width:7px;left:-4px}
+.sv-dim span{position:absolute;font:600 10px/1.2 ui-monospace,Menlo,monospace;background:rgba(255,255,255,.88);padding:0 3px;border-radius:3px;white-space:nowrap}
+.sv-dim-w span{left:50%;top:0;transform:translate(-50%,-50%)}
+.sv-dim-h span{top:50%;left:0;transform:translate(-50%,-50%) rotate(-90deg)}
 </style>
 <meta name="robots" content="noindex">
 </head>
@@ -4842,10 +4854,12 @@ body.sv-labels-on #sv-labels{display:block}
     <script src="js/phone-strip-dots.js"></script>
   
 <div id="sv-labels"></div>
+<div id="sv-dims"></div>
 <div id="sv-bar">
 <b>Visualisasi Struktur HTML</b> — salinan halaman Home dengan stroke per elemen.<br>
 <button id="sv-btn-stroke" type="button">Stroke: Nyala</button>
 <button id="sv-btn-label" type="button">Label nama: Mati</button>
+<button id="sv-btn-dim" type="button">Garis ukuran: Nyala</button>
 <a href="index.html">Buka halaman asli</a><br>
 <span class="sv-key"><i style="border:2px solid #2185e3"></i>div</span>
 <span class="sv-key"><i style="border:2px solid #16a34a"></i>main</span>
@@ -4859,40 +4873,64 @@ body.sv-labels-on #sv-labels{display:block}
 <script>
 (function(){
   document.body.classList.add('sv-on');
-  var bS=document.getElementById('sv-btn-stroke'), bL=document.getElementById('sv-btn-label');
-  bS.addEventListener('click',function(){
-    var on=document.body.classList.toggle('sv-on');
-    bS.textContent='Stroke: '+(on?'Nyala':'Mati');
-  });
-  function render(){
-    var wrap=document.getElementById('sv-labels'); wrap.innerHTML='';
-    var SKIP={SCRIPT:1,STYLE:1,PATH:1,USE:1,TITLE:1,META:1,LINK:1,BR:1};
-    var els=document.querySelectorAll('body *'), n=0, counters={};
-    els.forEach(function(el){
-      if(n>=400) return;
+  document.body.classList.add('sv-dims-on');
+  var bS=document.getElementById('sv-btn-stroke'), bL=document.getElementById('sv-btn-label'), bD=document.getElementById('sv-btn-dim');
+  bS.addEventListener('click',function(){ var on=document.body.classList.toggle('sv-on'); bS.textContent='Stroke: '+(on?'Nyala':'Mati'); });
+  var SKIP={SCRIPT:1,STYLE:1,PATH:1,USE:1,TITLE:1,META:1,LINK:1,BR:1};
+  function targets(){
+    var out=[], counters={};
+    document.querySelectorAll('body *').forEach(function(el){
+      if(out.length>=300) return;
       if(SKIP[el.tagName]) return;
-      if(el.closest('#sv-bar')||el.closest('#sv-labels')) return;
+      if(el.closest('#sv-bar')||el.closest('#sv-labels')||el.closest('#sv-dims')) return;
       var r=el.getBoundingClientRect();
       if(r.width<60||r.height<24) return;
       var tag=el.tagName.toLowerCase();
       var name=el.getAttribute('data-pencil-name')||(el.id?'#'+el.id:null)||(el.classList&&el.classList.length?'.'+el.classList[0]:null);
       if(!name){ counters[tag]=(counters[tag]||0)+1; name=tag+'-'+counters[tag]; }
-      var s=document.createElement('span'); s.className='sv-lbl';
-      s.textContent=tag+' \u00b7 '+name+' \u00b7 '+Math.round(r.width)+'\u00d7'+Math.round(r.height)+'px';
-      s.style.left=(r.left+window.scrollX)+'px';
-      s.style.top=(r.top+window.scrollY)+'px';
-      wrap.appendChild(s); n++;
+      out.push({r:r,tag:tag,name:name});
+    });
+    return out;
+  }
+  function dimW(x,y,w,val){
+    var d=document.createElement('div'); d.className='sv-dim sv-dim-w';
+    d.style.left=x+'px'; d.style.top=y+'px'; d.style.width=w+'px';
+    d.innerHTML='<i class="sv-tick" style="left:0"></i><i class="sv-tick" style="right:0"></i><span>'+val+'</span>';
+    return d;
+  }
+  function dimH(x,y,h,val){
+    var d=document.createElement('div'); d.className='sv-dim sv-dim-h';
+    d.style.left=x+'px'; d.style.top=y+'px'; d.style.height=h+'px';
+    d.innerHTML='<i class="sv-tick" style="top:0"></i><i class="sv-tick" style="bottom:0"></i><span>'+val+'</span>';
+    return d;
+  }
+  function render(){
+    var showL=document.body.classList.contains('sv-labels-on');
+    var showD=document.body.classList.contains('sv-dims-on');
+    var wl=document.getElementById('sv-labels'), wd=document.getElementById('sv-dims');
+    wl.innerHTML=''; wd.innerHTML='';
+    if(!showL&&!showD) return;
+    targets().forEach(function(t){
+      var px=t.r.left+window.scrollX, py=t.r.top+window.scrollY;
+      if(showL){
+        var s=document.createElement('span'); s.className='sv-lbl';
+        s.textContent=t.tag+' \u00b7 '+t.name;
+        s.style.left=px+'px'; s.style.top=py+'px';
+        wl.appendChild(s);
+      }
+      if(showD){
+        wd.appendChild(dimW(px, py+9, t.r.width, Math.round(t.r.width)+'px'));
+        wd.appendChild(dimH(px+9, py, t.r.height, Math.round(t.r.height)+'px'));
+      }
     });
   }
   var timer=null;
-  function queue(){ if(!document.body.classList.contains('sv-labels-on')) return; clearTimeout(timer); timer=setTimeout(render,120); }
-  bL.addEventListener('click',function(){
-    var on=document.body.classList.toggle('sv-labels-on');
-    bL.textContent='Label nama: '+(on?'Nyala':'Mati');
-    if(on) render();
-  });
+  function queue(){ clearTimeout(timer); timer=setTimeout(render,120); }
+  bL.addEventListener('click',function(){ var on=document.body.classList.toggle('sv-labels-on'); bL.textContent='Label nama: '+(on?'Nyala':'Mati'); render(); });
+  bD.addEventListener('click',function(){ var on=document.body.classList.toggle('sv-dims-on'); bD.textContent='Garis ukuran: '+(on?'Nyala':'Mati'); render(); });
   window.addEventListener('scroll',queue,{passive:true});
   window.addEventListener('resize',queue);
+  render();
 })();
 </script>
 </body>
