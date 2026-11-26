@@ -4872,7 +4872,7 @@ body.sv-labels-on #sv-labels{display:block}
       var r=el.getBoundingClientRect();
       if(r.width<60||r.height<24) return;
       var s=document.createElement('span'); s.className='sv-lbl';
-      s.textContent=el.tagName.toLowerCase()+' \u00b7 '+el.getAttribute('data-pencil-name');
+      s.textContent=el.tagName.toLowerCase()+' \u00b7 '+el.getAttribute('data-pencil-name')+' \u00b7 '+Math.round(r.width)+'\u00d7'+Math.round(r.height)+'px';
       s.style.left=(r.left+window.scrollX)+'px';
       s.style.top=(r.top+window.scrollY)+'px';
       wrap.appendChild(s); n++;
