@@ -4866,13 +4866,19 @@ body.sv-labels-on #sv-labels{display:block}
   });
   function render(){
     var wrap=document.getElementById('sv-labels'); wrap.innerHTML='';
-    var els=document.querySelectorAll('[data-pencil-name]'), n=0;
+    var SKIP={SCRIPT:1,STYLE:1,PATH:1,USE:1,TITLE:1,META:1,LINK:1,BR:1};
+    var els=document.querySelectorAll('body *'), n=0, counters={};
     els.forEach(function(el){
-      if(n>=160) return;
+      if(n>=400) return;
+      if(SKIP[el.tagName]) return;
+      if(el.closest('#sv-bar')||el.closest('#sv-labels')) return;
       var r=el.getBoundingClientRect();
       if(r.width<60||r.height<24) return;
+      var tag=el.tagName.toLowerCase();
+      var name=el.getAttribute('data-pencil-name')||(el.id?'#'+el.id:null)||(el.classList&&el.classList.length?'.'+el.classList[0]:null);
+      if(!name){ counters[tag]=(counters[tag]||0)+1; name=tag+'-'+counters[tag]; }
       var s=document.createElement('span'); s.className='sv-lbl';
-      s.textContent=el.tagName.toLowerCase()+' \u00b7 '+el.getAttribute('data-pencil-name')+' \u00b7 '+Math.round(r.width)+'\u00d7'+Math.round(r.height)+'px';
+      s.textContent=tag+' \u00b7 '+name+' \u00b7 '+Math.round(r.width)+'\u00d7'+Math.round(r.height)+'px';
       s.style.left=(r.left+window.scrollX)+'px';
       s.style.top=(r.top+window.scrollY)+'px';
       wrap.appendChild(s); n++;
