@@ -428,3 +428,33 @@
         updateNavPadding();
       })();
     
+
+/* --- script 10 --- */
+      (function () {
+        function normalize(path) {
+          return path.replace(/\.html$/, "").replace(/\/$/, "");
+        }
+
+        document.addEventListener("click", function (event) {
+          var target = event.target;
+          var link = target && target.closest ? target.closest("a[href]") : null;
+          if (!link || link.target || link.hasAttribute("download")) return;
+
+          var url;
+          try {
+            url = new URL(link.getAttribute("href"), window.location.href);
+          } catch (e) {
+            return;
+          }
+          if (url.origin !== window.location.origin || url.hash) return;
+          if (normalize(url.pathname) !== normalize(window.location.pathname)) return;
+
+          // A link to the page already open (back-to-top, logo, the current
+          // nav item) would normally reload the page. Glide to the top
+          // instead, instantly when the user prefers reduced motion.
+          event.preventDefault();
+          var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+        });
+      })();
+    

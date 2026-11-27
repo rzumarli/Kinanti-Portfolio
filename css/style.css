@@ -298,7 +298,7 @@
         width: 1512px !important;
         padding: 36px 97px 28px;
         background-color: #f9f5f2;
-        transition: padding 0.2s ease;
+        transition: padding 0.25s cubic-bezier(0.22, 1, 0.36, 1);
       }
 
       .site-header.is-stuck {
@@ -356,6 +356,13 @@
 
       html {
         scroll-behavior: smooth;
+        scroll-padding-top: 120px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
       }
 
       .pn-primary-button {
@@ -373,13 +380,6 @@
 
       .pn-secondary-button:hover {
         background-color: #e5e5e5 !important;
-      }
-
-      #home,
-      #experience,
-      #uiux-project,
-      #contact {
-        scroll-margin-top: 165px;
       }
 
       .exp-card--right,
@@ -655,7 +655,7 @@
     background-color: #363636;
     transform: scaleX(0);
     transform-origin: left center;
-    transition: transform 0.18s ease;
+    transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
     pointer-events: none;
   }
 
@@ -686,7 +686,7 @@
     background-color: #363636;
     transform: scaleX(0);
     transform-origin: left center;
-    transition: transform 0.18s ease;
+    transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
     pointer-events: none;
   }
 
@@ -718,7 +718,7 @@
     background-color: #363636;
     transform: scaleX(0);
     transform-origin: left center;
-    transition: transform 0.18s ease;
+    transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
     pointer-events: none;
   }
 
