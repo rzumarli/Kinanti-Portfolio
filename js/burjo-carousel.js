@@ -6,7 +6,7 @@
    On wider screens the script does nothing and the normal
    gallery layout applies. */
 (function () {
-  var stage = document.querySelector('[data-pencil-name="Frame 8897"]');
+  var stage = document.querySelector('.pn-frame-8897');
   if (!stage) return;
   var slides = Array.prototype.slice.call(stage.children);
   if (slides.length < 2) return;

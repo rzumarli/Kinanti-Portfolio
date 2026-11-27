@@ -5,8 +5,8 @@
    below) in css/responsive.css; on desktop the row stays hidden. */
 (function () {
   var strips = document.querySelectorAll(
-    '[data-pencil-name="Frame 8849"] > [data-pencil-name="Frame 8857"], ' +
-      '[data-pencil-name="Frame 8849"] > [data-pencil-name="Frame 8856"]'
+    '.pn-frame-8849 > .pn-frame-8857, ' +
+      '.pn-frame-8849 > .pn-frame-8856'
   );
 
   strips.forEach(function (strip) {

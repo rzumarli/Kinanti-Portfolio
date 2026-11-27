@@ -24,8 +24,8 @@
           var hero = document.querySelector(".hero-section");
           if (!hero) return;
 
-          var frame19 = hero.querySelector('[data-pencil-name="Frame 19"]');
-          var actions = hero.querySelector('[data-pencil-name="Frame 26"]');
+          var frame19 = hero.querySelector('.pn-frame-19');
+          var actions = hero.querySelector('.pn-frame-26');
           if (!frame19 || !actions) return;
 
           // Shrink the decorative offset on shorter screens so the hero always
@@ -100,7 +100,7 @@
         var items = Array.prototype.slice
           .call(stack.children)
           .filter(function (wrap) {
-            return wrap.hasAttribute("data-pencil-name");
+            return wrap.classList.contains("project-card");
           })
           .map(function (wrap) {
             return {
@@ -177,7 +177,7 @@
 /* --- script 4 --- */
       (function () {
         var group = document.querySelector(
-          '[data-pencil-name="Frame 8849"] > [data-pencil-name="Frame 8857"]'
+          '.pn-frame-8849 > .pn-frame-8857'
         );
         if (!group) return;
 
@@ -226,7 +226,7 @@
 /* --- script 5 --- */
       (function () {
         var group = document.querySelector(
-          '[data-pencil-name="Frame 8849"] > [data-pencil-name="Frame 8856"]'
+          '.pn-frame-8849 > .pn-frame-8856'
         );
         if (!group) return;
 
@@ -316,7 +316,7 @@
 
 /* --- script 7 --- */
       (function () {
-        var card = document.querySelector('#contact [data-pencil-name="brand"]');
+        var card = document.querySelector('#contact .pn-brand');
         if (!card) return;
 
         var targets = [
@@ -416,7 +416,7 @@
 
 /* --- script 9 --- */
       (function () {
-        var nav = document.querySelector('[data-pencil-name="Frame 12"]');
+        var nav = document.querySelector('.site-header');
         if (!nav) return;
 
         function updateNavPadding() {

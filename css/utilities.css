@@ -1,0 +1,115 @@
+/* Shared utility classes extracted from repeated inline styles
+   by scripts/extract_styles.py (point-1 refactor). Loaded last;
+   do not edit by hand, regenerate instead. */
+
+.u1 { align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 12px; height: fit-content; justify-content: flex-start; width: fit-content; }
+.u2 { box-sizing: border-box; color: #363636ff; font-family: Silkscreen, system-ui, sans-serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; width: 100%; }
+.u3 { align-items: center; background-color: #ffffff4d; border-radius: 100px; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 10px; height: fit-content; justify-content: center; padding: 8px 12px; width: fit-content; }
+.u4 { box-sizing: border-box; color: #363636ff; font-family: "DM Sans", system-ui, sans-serif; font-size: 12px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap; }
+.u5 { box-sizing: border-box; color: #4e4e4eff; font-family: "DM Sans", system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: 28px; text-align: left; white-space: nowrap; }
+.u6 { box-sizing: border-box; color: #4e4e4eff; font-family: "DM Sans", system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap; text-decoration: none; }
+.u7 { background-color: #e8ee58ff; border-radius: 50%; box-sizing: border-box; flex-shrink: 0; height: 10px; width: 10px; }
+.u8 { box-sizing: border-box; color: #363636ff; font-family: "DM Sans", system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 500; letter-spacing: -0.4px; line-height: normal; text-align: left; white-space: nowrap; }
+.u9 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 8px; height: fit-content; justify-content: flex-start; width: 100%; }
+.u10 { box-sizing: border-box; flex-shrink: 0; height: 12px; overflow: hidden; position: relative; width: 12px; }
+.u11 { box-sizing: border-box; color: #4e4e4eff; font-family: "DM Sans", system-ui, sans-serif; font-size: 18px; font-style: normal; font-weight: 500; letter-spacing: -0.36px; line-height: 27px; text-align: left; white-space: nowrap; }
+.u12 { box-sizing: border-box; color: #363636ff; font-family: Silkscreen, system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap; text-decoration: none; }
+.u13 { align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 10px; height: fit-content; justify-content: flex-start; overflow: hidden; padding: 6px 0px 0px 0px; width: fit-content; }
+.u14 { box-sizing: border-box; color: #363636ff; font-family: Silkscreen, system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap; }
+.u15 { box-sizing: border-box; color: #363636ff; font-family: Silkscreen, system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap; }
+.u16 { box-sizing: border-box; flex-shrink: 0; height: 24px; position: relative; width: 24px; }
+.u17 { box-sizing: border-box; height: 60.179px; left: 7.403px; position: absolute; top: 1.911px; width: 48.984px; z-index: 0; }
+.u18 { box-sizing: border-box; color: #4e4e4eff; flex: 1 1 0; font-family: "DM Sans", system-ui, sans-serif; font-size: 18px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; }
+.u19 { box-sizing: border-box; flex-shrink: 0; height: 18.272px; position: relative; width: 126px; }
+.u20 { box-sizing: border-box; height: 4.991px; left: 21.546px; position: absolute; top: 0px; transform-origin: top left; transform: rotate(6.233deg); width: 5.289px; z-index: 1; }
+.u21 { box-sizing: border-box; height: 4.991px; left: 120.458px; position: absolute; top: 0px; transform-origin: top left; transform: rotate(6.233deg); width: 5.289px; z-index: 2; }
+.u22 { box-sizing: border-box; height: 4.991px; left: 61.735px; position: absolute; top: 4.747px; transform-origin: top left; transform: rotate(6.233deg); width: 5.289px; z-index: 3; }
+.u23 { box-sizing: border-box; flex-shrink: 0; height: 12.727px; overflow: hidden; position: relative; width: 12.727px; z-index: 1; }
+.u24 { box-sizing: border-box; height: 16px; left: 4px; position: absolute; top: 4px; width: 16px; z-index: 0; }
+.u25 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 8px; height: fit-content; justify-content: flex-start; width: fit-content; }
+.u26 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 24px; height: fit-content; justify-content: flex-start; position: relative; width: 100%; }
+.u27 { box-sizing: border-box; color: #4e4e4eff; font-family: "DM Sans", system-ui, sans-serif; font-size: 18px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap; }
+.u28 { box-sizing: border-box; color: #ffffffff; font-family: Silkscreen, system-ui, sans-serif; font-size: 16.161px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; text-align: center; white-space: nowrap; }
+.u29 { align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 12px; height: 51px; justify-content: center; width: 100%; }
+.u30 { box-sizing: border-box; color: #363636ff; font-family: Silkscreen, system-ui, sans-serif; font-size: 40px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap; }
+.u31 { box-sizing: border-box; flex-shrink: 0; height: 432px; position: relative; width: 100%; }
+.u32 { border-radius: 25px; box-sizing: border-box; flex-shrink: 0; height: 280px; overflow: hidden; position: relative; width: 347px; z-index: 1 display: block; text-decoration: none; }
+.u33 { box-sizing: border-box; display: block; height: 100%; object-fit: cover; width: 100%; }
+.u34 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 24px; height: 100%; justify-content: space-between; position: relative; z-index: 2; }
+.u35 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 12px; height: fit-content; justify-content: flex-start; width: 100%; }
+.u36 { background-color: #f9f5f2ff; box-sizing: border-box; height: 18px; left: -16px; position: absolute; top: 23px; width: 827px; z-index: 0; }
+.u37 { box-sizing: border-box; color: #363636ff; font-family: Silkscreen, system-ui, sans-serif; font-size: 36px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; position: relative; text-align: left; width: 100%; z-index: 1 text-decoration: none; }
+.u38 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 40px; height: fit-content; justify-content: flex-start; width: 100%; }
+.u39 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 8px; height: fit-content; justify-content: center; width: 390px; }
+.u40 { box-sizing: border-box; color: #4e4e4eff; font-family: "DM Sans", system-ui, sans-serif; font-size: 18px; font-style: normal; font-weight: 500; letter-spacing: -0.54px; line-height: 27px; text-align: left; width: 100%; }
+.u41 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 8px; height: fit-content; justify-content: center; width: fit-content; }
+.u42 { align-items: flex-end; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 10px; height: fit-content; justify-content: center; width: 100%; }
+.u43 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: row; flex: 1 1 0; gap: 4px; height: fit-content; justify-content: flex-start; }
+.u44 { align-items: center; background-color: #e8ee58ff; border-radius: 100px; border: 4px solid #e8ee58ff; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 8px; height: fit-content; justify-content: center; padding: 12px 20px; width: fit-content; }
+.u45 { box-sizing: border-box; color: #363636ff; font-family: Silkscreen, system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap; }
+.u46 { box-sizing: border-box; flex-shrink: 0; height: 20px; position: relative; width: 20px; }
+.u47 { box-sizing: border-box; color: #4e4e4eff; font-family: "DM Sans", system-ui, sans-serif; font-size: 18px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; width: 100%; }
+.u48 { box-sizing: border-box; color: #000000ff; font-family: "DM Sans", system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; width: 100%; }
+.u49 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; gap: 0px; height: fit-content; justify-content: flex-start; overflow: hidden; width: 1512px; }
+.u50 { align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 24px; height: fit-content; justify-content: space-between; width: 100%; }
+.u51 { align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 4px; height: fit-content; justify-content: flex-start; width: fit-content; }
+.u52 { box-sizing: border-box; display: block; flex-shrink: 0; text-decoration: none; color: inherit; }
+.u53 { align-items: center; box-sizing: border-box; display: flex; flex-direction: row; gap: 32px; list-style: none; margin: 0; padding: 0; }
+.u54 { background-color: #fe7fc4ff; border-radius: 6.4px; box-sizing: border-box; clip-path: path('M14.457 9.6 C15.601 7.62 17.714 6.4 20 6.4 C22.286 6.4 24.399 7.62 25.543 9.6 L31.778 20.4 C32.921 22.38 32.921 24.82 31.778 26.8 C30.635 28.78 28.522 30 26.235 30 L13.765 30 C11.478 30 9.365 28.78 8.222 26.8 C7.079 24.82 7.079 22.38 8.222 20.4 L14.457 9.6 Z'); height: 40px; left: 40px; position: absolute; top: 0px; transform-origin: top left; transform: rotate(90deg); width: 40px; }
+.u55 { box-sizing: border-box; color: #000000ff; font-family: Silkscreen, system-ui, sans-serif; font-size: 24px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; width: 100%; }
+.u56 { box-sizing: border-box; color: #000000ff; font-family: "DM Sans", system-ui, sans-serif; font-size: 36px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; width: 100%; }
+.u57 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: fit-content; justify-content: space-between; position: relative; width: 100%; z-index: 0; }
+.u58 { align-items: flex-start; background-color: #f8bbdcff; border-radius: 40px; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 32px; height: fit-content; justify-content: flex-start; padding: 60px 60px 40px 60px; position: relative; width: 508px; z-index: 0; }
+.u59 { box-sizing: border-box; color: #4e4e4eff; font-family: "DM Sans", system-ui, sans-serif; font-size: 36px; font-style: normal; font-weight: 700; letter-spacing: -1.44px; line-height: normal; position: relative; text-align: left; width: 100%; z-index: 1; }
+.u60 { box-sizing: border-box; color: #363636ff; font-family: "DM Sans", system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 600; letter-spacing: 0px; line-height: 28px; position: relative; text-align: left; width: 100%; z-index: 2; }
+.u61 { align-items: center; background-color: #e8ee58ff; border-radius: 100px; border: 4px solid #e8ee58ff; box-sizing: border-box; color: inherit; display: flex; flex-direction: row; flex-shrink: 0; gap: 8px; height: fit-content; justify-content: center; padding: 16px 24px; position: relative; text-decoration: none; width: 100%; z-index: 3; }
+.u62 { align-items: center; background-color: #f85c36ff; border-radius: 100px; box-sizing: border-box; display: flex; flex-direction: row; gap: 10px; height: fit-content; justify-content: center; left: 351.362px; padding: 10px 12px; position: absolute; top: -40.138px; transform-origin: top left; transform: rotate(11.769deg); width: fit-content; z-index: 4; }
+.u63 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 16px; height: fit-content; justify-content: flex-start; position: relative; width: fit-content; z-index: 1; }
+.u64 { align-items: center; background-color: #2185e3ff; border-radius: 14px; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 0px; height: 28px; justify-content: center; overflow: hidden; position: relative; width: 28px; }
+.u65 { align-items: center; background-color: #f85c36ff; border-radius: 14px; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 0px; height: 28px; justify-content: center; position: relative; width: 28px; }
+.u66 { align-items: center; background-color: #fe7fc4ff; border-radius: 14px; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 0px; height: 28px; justify-content: center; position: relative; width: 28px; }
+.u67 { align-items: center; background-color: #363636ff; border-radius: 14px; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 0px; height: 28px; justify-content: center; position: relative; width: 28px; }
+.u68 { box-sizing: border-box; flex-shrink: 0; height: 12.727px; position: relative; width: 12.727px; z-index: 1; }
+.u69 { display: flex; flex-direction: column; gap: 16px; list-style: none; margin: 0; padding: 0; }
+.u70 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 4px; height: fit-content; justify-content: flex-start; width: fit-content; }
+.u71 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 4px; height: fit-content; justify-content: flex-start; width: fit-content; }
+.u72 { box-sizing: border-box; color: #4e4e4eff; font-family: "DM Sans", system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 500; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap; }
+.u73 { box-sizing: border-box; color: #4e4e4eff; font-family: Silkscreen, system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap; }
+.u74 { align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 0px; height: fit-content; justify-content: space-between; position: relative; width: 100%; z-index: 1; }
+.u75 { box-sizing: border-box; color: #4e4e4eff; font-family: "DM Sans", system-ui, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap; }
+.u76 { align-items: flex-start; background-color: #f9f5f2ff; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 60px; height: fit-content; justify-content: flex-start; overflow: hidden; padding: 0 97px 60px; width: 100%; }
+.u77 { box-sizing: border-box; color: #4e4e4eff; font-family: "DM Sans", system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 600; letter-spacing: 0px; line-height: normal; text-align: left; width: 100%; }
+.u78 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 8px; height: fit-content; justify-content: center; width: 100%; }
+.u79 { width:51px;height:51px; }
+.u80 { box-sizing: border-box; color: #363636ff; font-family: Silkscreen, system-ui, sans-serif; font-size: 82px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; white-space: nowrap; }
+.u81 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 12px; height: fit-content; justify-content: flex-start; position: relative; width: 100%; z-index: 1; }
+.u82 { background-color: #f9f5f2ff; box-sizing: border-box; height: 15px; left: 0px; position: absolute; top: 23px; width: 316px; z-index: 0; }
+.u83 { box-sizing: border-box; color: #363636ff; font-family: Silkscreen, system-ui, sans-serif; font-size: 32px; font-style: normal; font-weight: 700; letter-spacing: 0px; line-height: normal; position: relative; text-align: left; width: 100%; z-index: 1; }
+.u84 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 2px; height: fit-content; justify-content: flex-start; width: 100%; }
+.u85 { box-sizing: border-box; color: #363636ff; font-family: Silkscreen, system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 400; letter-spacing: 0px; line-height: normal; text-align: left; width: 100%; }
+.u86 { box-sizing: border-box; flex-shrink: 0; height: 441.218px; position: relative; width: 218.113px; }
+.u87 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 12px; height: fit-content; justify-content: center; position: relative; width: fit-content; z-index: 3; }
+.u88 { box-sizing: border-box; color: #4e4e4eff; font-family: "DM Sans", system-ui, sans-serif; font-size: 20px; font-style: normal; font-weight: 600; letter-spacing: -0.4px; line-height: normal; text-align: left; width: 100%; }
+.u89 { align-items: flex-start; background-color: #f8bbdcff; border-radius: 80px; box-shadow: 4px 2px 87.5px #0000000d; box-sizing: border-box; display: flex; flex-direction: row; gap: 40px; height: 400px; justify-content: flex-start; left: 0px; overflow: hidden; padding: 60px; position: absolute; top: 32px; width: 1318px; z-index: 0; }
+.u90 { align-items: flex-start; background-color: #91caffff; border-radius: 80px; box-shadow: 4px 2px 87.5px #0000000d; box-sizing: border-box; display: flex; flex-direction: row; gap: 40px; height: 400px; justify-content: flex-start; left: 0px; overflow: hidden; padding: 60px; position: absolute; top: 32px; width: 1318px; z-index: 0; }
+.u91 { align-items: flex-start; background-color: #ffa893ff; border-radius: 80px; box-shadow: 4px 2px 87.5px #0000000d; box-sizing: border-box; display: flex; flex-direction: row; gap: 40px; height: 400px; justify-content: flex-start; left: 0px; overflow: hidden; padding: 60px; position: absolute; top: 32px; width: 1318px; z-index: 0; }
+.u92 { align-items: flex-start; background-color: #ffffffff; border-radius: 80px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; height: fit-content; justify-content: flex-start; left: 0px; overflow: hidden; padding: 40px; position: absolute; top: 30px; width: 1318px; z-index: 0; }
+.u93 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 55px; height: fit-content; justify-content: flex-start; position: relative; width: 1240px; z-index: 2; }
+.u94 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 8px; height: fit-content; justify-content: center; width: 576px; }
+.u95 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 8px; height: fit-content; justify-content: flex-start; }
+.u96 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 46px; height: fit-content; justify-content: flex-start; }
+.u97 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 46px; height: fit-content; justify-content: flex-start; width: 100%; }
+.u98 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 8px; height: fit-content; justify-content: center; }
+.u99 { align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 8px; height: fit-content; justify-content: flex-start; width: 100%; }
+.u100 { box-sizing: border-box; flex-shrink: 0; height: 562.454px; width: 278.046px; }
+.u101 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 24px; height: fit-content; justify-content: flex-start; width: 100%; }
+.u102 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 60px; height: fit-content; justify-content: flex-start; width: 100%; }
+.u103 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 60px; height: fit-content; justify-content: flex-start; width: 850px; }
+.u104 { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; flex-shrink: 0; gap: 8px; height: fit-content; justify-content: flex-start; width: 600px; }
+.u105 { background-image: url('assets/instagram.png'); background-position: center; background-repeat: no-repeat; background-size: cover; box-sizing: border-box; flex-shrink: 0; height: 24px; width: 24px; }
+.u106 { align-items: flex-end; box-sizing: border-box; display: flex; flex-direction: column; flex: 1 1 0; gap: 10px; height: 100%; justify-content: center; }
+.u107 { align-items: center; background-color: #e8ee58ff; border-radius: 100px; border: 4px solid #e8ee58ff; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 8px; height: fit-content; justify-content: center; padding: 16px 24px; width: fit-content; text-decoration: none; }
+.u108 { width:53px;height:38px; }
+.u109 { width:53px;height:51px; }
+.u110 { width:53px;height:48px; }
+.u111 { align-items: center; box-sizing: border-box; display: flex; flex-direction: row; flex-shrink: 0; gap: 10px; height: fit-content; justify-content: flex-start; width: 100%; }

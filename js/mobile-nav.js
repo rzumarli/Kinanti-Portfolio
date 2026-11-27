@@ -2,8 +2,8 @@
    On small screens the link row (Frame 11) is hidden until the
    button expands it. Styling lives in css/responsive.css. */
 (function () {
-  var bar = document.querySelector('[data-pencil-name="Frame 12"]');
-  var menu = document.querySelector('[data-pencil-name="Frame 11"]');
+  var bar = document.querySelector('.site-header');
+  var menu = document.querySelector('.main-nav');
   if (!bar || !menu) return;
 
   menu.id = "mobile-menu";
